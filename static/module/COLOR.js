@@ -1,14 +1,14 @@
-export const RED = 0;
-export const REDORANGE = 20;
-export const ORANGE = 30;
-export const YELLOWORANGE = 50;
-export const YELLOW = 60;
-export const YELLOWGREEN = 90;
-export const GREEN = 120;
-export const BLUEGREEN = 150;
-export const BLUE = 240;
-export const BLUEVIOLET = 260;
-export const VIOLET = 280;
-export const REDVIOLET = 330;
+export const COLOR_DICT = {};
 
-export const COLOR_LIST = ["RED", "REDORANGE", "ORANGE", "YELLOWORANGE", "YELLOW", "YELLOWGREEN", "GREEN", "BLUEGREEN", "BLUE", "BLUEVIOLET", "VIOLET", "REDVIOLET"];
+COLOR_DICT["RED"] = 0;
+COLOR_DICT["REDORANGE"] = 20;
+COLOR_DICT["ORANGE"] = 30;
+COLOR_DICT["YELLOWORANGE"] = 50;
+COLOR_DICT["YELLOW"] = 60;
+COLOR_DICT["YELLOWGREEN"] = 90;
+COLOR_DICT["GREEN"] = 120;
+COLOR_DICT["BLUEGREEN"] = 150;
+COLOR_DICT["BLUE"] = 240;
+COLOR_DICT["BLUEVIOLET"] = 260;
+COLOR_DICT["VIOLET"] = 280;
+COLOR_DICT["REDVIOLET"] = 330;
