@@ -1,0 +1,12 @@
+export const RED = 0;
+export const REDORANGE = 20;
+export const ORANGE = 30;
+export const YELLOWORANGE = 50;
+export const YELLOW = 60;
+export const YELLOWGREEN = 90;
+export const GREEN = 120;
+export const BLUEGREEN = 150;
+export const BLUE = 240;
+export const BLUEVIOLET = 260;
+export const VIOLET = 280;
+export const REDVIOLET = 330;
