@@ -2,7 +2,7 @@
   "name": "yourpalette",
   "version": "1.0.0",
   "description": "Pallete 구현하기 위해 첫번째로 어떤 기준으로 색을 추천할 것 인가에 대해서는.. 톤? 이라는 개념을 적용해보기로 했다.",
-  "type":"module",
+  "type": "module",
   "main": "pallet.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/SugarSyrup/yourPalette/issues"
   },
-  "homepage": "https://github.com/SugarSyrup/yourPalette#readme"
+  "homepage": "https://github.com/SugarSyrup/yourPalette#readme",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
 }

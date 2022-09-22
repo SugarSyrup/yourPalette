@@ -10,3 +10,5 @@ export const BLUE = 240;
 export const BLUEVIOLET = 260;
 export const VIOLET = 280;
 export const REDVIOLET = 330;
+
+export const COLOR_LIST = ["RED", "REDORANGE", "ORANGE", "YELLOWORANGE", "YELLOW", "YELLOWGREEN", "GREEN", "BLUEGREEN", "BLUE", "BLUEVIOLET", "VIOLET", "REDVIOLET"];
