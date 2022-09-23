@@ -2,23 +2,33 @@ content {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    row-gap:10px;
-    column-gap: 10px;
+    row-gap:0px;
+    column-gap: 20px;
 
-    height:90%;
+    height:87%;
     background-color:beige;
 
-    padding:10px;
+    padding-left:30px;
+    padding-right:30px;
+
+    padding-top:20px;
+    padding-bottom:20px;
+
 }
 
 content .palette{
-    height:100%;
+    height:80%;
 }
 
 content .palette .palette-link{
     display:flex;
     flex-direction:column;
     height:100%;
+
+    background-color:white;
+    padding:10px;
+
+    border-radius: 5px;
 }
 
 content .palette .palette-link .colors{
@@ -26,6 +36,8 @@ content .palette .palette-link .colors{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+
+    border-radius: 10px;
 }
 
 content .palette .palette-link .colors .color{
@@ -33,11 +45,30 @@ content .palette .palette-link .colors .color{
     height:100%;
 }
 
+content .palette .palette-link .colors .color:nth-child(1){
+    border-top-left-radius: 10px;
+}
+content .palette .palette-link .colors .color:nth-child(4){
+    border-top-right-radius: 10px;
+}
+content .palette .palette-link .colors .color:nth-child(9){
+    border-bottom-left-radius: 10px;
+}
+content .palette .palette-link .colors .color:nth-child(12){
+    border-bottom-right-radius: 10px;
+}
+
 content .palette .palette-link .tone-names {
     height:20%;
+
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 content .palette .palette-link .tone-names .tone-name{
-    margin-left:5px;
-    margin-top:5px;
+    margin-left:10px;
+
+    font-size:16px;
+    font-weight:bolder;
 }
