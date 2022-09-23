@@ -14,6 +14,7 @@ content {
     padding-top:20px;
     padding-bottom:20px;
 
+    background-color: #7b9acc;
 }
 
 content .palette{
@@ -28,7 +29,7 @@ content .palette .palette-link{
     background-color:white;
     padding:10px;
 
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 content .palette .palette-link .colors{
@@ -45,7 +46,7 @@ content .palette .palette-link .colors .color{
     height:100%;
 }
 
-content .palette .palette-link .colors .color:nth-child(1){
+/* content .palette .palette-link .colors .color:nth-child(1){
     border-top-left-radius: 10px;
 }
 content .palette .palette-link .colors .color:nth-child(4){
@@ -56,7 +57,7 @@ content .palette .palette-link .colors .color:nth-child(9){
 }
 content .palette .palette-link .colors .color:nth-child(12){
     border-bottom-right-radius: 10px;
-}
+} */
 
 content .palette .palette-link .tone-names {
     height:20%;
