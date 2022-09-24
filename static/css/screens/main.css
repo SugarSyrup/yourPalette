@@ -19,6 +19,7 @@ content {
 
 content .palette{
     height:80%;
+    cursor:pointer;
 }
 
 content .palette .palette-link{

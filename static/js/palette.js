@@ -1,7 +1,7 @@
 import {COLOR_DICT}  from '../module/COLOR.js';
 import {TONE_DICT} from '../module/TONE.js';
 
-const palettes = document.getElementsByClassName("palette");
+const palettes = document.querySelectorAll(".palette");
 
 Array.prototype.forEach.call(palettes, (palette) => {
     const tone = palette.getElementsByClassName("tone-name")[0].innerHTML;
@@ -15,3 +15,10 @@ Array.prototype.forEach.call(palettes, (palette) => {
         colors.appendChild(color);
     });
 });
+
+palettes.forEach((palette) => {
+    palette.addEventListener('click', (event) => {
+        localStorage.setItem("tone", palette.querySelector(".tone-name").innerHTML);
+        location.href = "details.html";
+    })
+})
