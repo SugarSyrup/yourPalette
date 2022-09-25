@@ -4,9 +4,7 @@
 
 Pallete 구현하기 위해 첫번째로 어떤 기준으로 색을 추천할 것 인가에 대해서는.. 톤? 이라는 개념을 적용해보기로 했다.
 
-![image1](./tone.jpg)
-![image2](./tone2.jpg)
-![image2](./tone3.jpg)
+![image2](./assets/image/tone2.jpg)
 
 3번 이미지를 참고로 13가지 톤을 기준으로 정하고
 
