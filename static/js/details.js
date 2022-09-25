@@ -27,7 +27,8 @@ var txtFLag = true;
 Object.keys(DETAIL_COLOR_DICT).forEach((COLOR) => {
     //create color div
     var color = document.createElement('div');
-    color.style.backgroundColor = `hsl(${DETAIL_COLOR_DICT[COLOR]}, ${TONE_DICT[tone_saturation]}%, ${TONE_DICT[tone_lightness]}%)`;
+    var backColor = `hsl(${DETAIL_COLOR_DICT[COLOR]}, ${TONE_DICT[tone_saturation]}%, ${TONE_DICT[tone_lightness]}%)`
+    color.style.backgroundColor = backColor;
     color.className = COLOR + " color";
 
     //create span : copy
@@ -35,6 +36,7 @@ Object.keys(DETAIL_COLOR_DICT).forEach((COLOR) => {
     copySpan.innerHTML = "COPY";
     copySpan.className = "copy-btn";
     copySpan.style.display = "none";
+    copySpan.style.backgroundColor = backColor;
     color.appendChild(copySpan);
 
     color.addEventListener('mouseenter', (event) => {
@@ -45,12 +47,14 @@ Object.keys(DETAIL_COLOR_DICT).forEach((COLOR) => {
     })
 
     color.addEventListener('click', (event) => {
-        var colorCodes = event.target.parentNode.style.backgroundColor.substr(3).slice(1,-1).split(",");
+        var colorCodes = event.target.style.backgroundColor.substr(3).slice(1,-1).split(", ");
+        console.log(colorCodes);
         var rgbCode = "#";
         colorCodes.forEach((colorCode) => {
-            rgbCode += parseInt(colorCode.trim()).toString(16).toUpperCase();
+            rgbCode += parseInt(colorCode).toString(16).toUpperCase() == "0" ? "00" : parseInt(colorCode).toString(16).toUpperCase();
         });
         copyToClipboard(rgbCode);
+        console.log(rgbCode);
         flash_message.style.display = "flex";
         flash_message.classList.add("flash-message-effect");
 
@@ -64,6 +68,7 @@ Object.keys(DETAIL_COLOR_DICT).forEach((COLOR) => {
         var colorName = document.createElement('span');
         colorName.innerHTML = COLOR;
         colorName.className = "color-name";
+        colorName.style.backgroundColor = backColor;
         color.appendChild(colorName);
         txtFLag = false;
     } else {
