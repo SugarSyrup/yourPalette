@@ -51,7 +51,7 @@ Object.keys(DETAIL_COLOR_DICT).forEach((COLOR) => {
         console.log(colorCodes);
         var rgbCode = "#";
         colorCodes.forEach((colorCode) => {
-            rgbCode += parseInt(colorCode).toString(16).toUpperCase() == "0" ? "00" : parseInt(colorCode).toString(16).toUpperCase();
+            rgbCode += parseInt(colorCode).toString(16).toUpperCase().length == 1 ? "0" + parseInt(colorCode).toString(16).toUpperCase() : parseInt(colorCode).toString(16).toUpperCase();
         });
         copyToClipboard(rgbCode);
         console.log(rgbCode);
