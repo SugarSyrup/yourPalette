@@ -12,6 +12,10 @@ header {
     background-color: #7b9acc;
 }
 
+header a{
+    margin-top:10px;
+}
+
 header span {
     margin-left:40px;
     margin-top:10px;
