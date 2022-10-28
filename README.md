@@ -1,4 +1,4 @@
-# YOUR Palette
+# YOUR Palette v1.0
 
 COLOR Palette. 사용언어: HTML, CSS, JavaScript
 
@@ -18,7 +18,8 @@ Static Page ver1 : (github-pages)[https://sugarsyrup.github.io/yourPalette/]
 
 # Technologies
 
--
+HTML, CSS, JavaScript
+live-server[node-js]
 
 # Reflection
 
@@ -29,7 +30,10 @@ TONE을 주제로 정해 12가지의 TONE을 사용자 에게 보여주고, 사�
 
 # To Be Implements
 
-[] refactoring : React
-[] More Color or Select Hue Value
-[] Connect DB => Add Color Charts
-[] Dark Mode or Many Background Mode
+: React 사용이 아직 미숙해서, 일단 포기했다.
+추후 React, Redux를 공부해서 특징을 살려서 페이지에 녹여 내는것이 다음 version의 목적.
+
+- [] refactoring : React
+- [] More Color or Select Hue Value
+- [] Connect DB => Add Color Charts
+- [] Dark Mode or Many Background Mode
