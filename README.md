@@ -1,49 +1,70 @@
-# Your Palette v2.0
+# Getting Started with Create React App
 
-## Project Status
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Palette 2.0 제작중...
+## Available Scripts
 
-페이지가 제대로 동작하지 않습니다.
+In the project directory, you can run:
 
-# 이전 버젼 README
+### `npm start`
 
-## YOUR Palette v1.0
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-COLOR Palette. 사용언어: HTML, CSS, JavaScript
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-A WebSite used for COLOR Palette, built with HTML, JavaScript, CSS
+### `npm test`
 
-## Project Status
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Static Page ver1 : (github-pages)[https://sugarsyrup.github.io/yourPalette/]
+### `npm run build`
 
-## Project Screen Shot(s)
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-![screensh](./screenshot.PNG)
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## Installation and Setup Instructions
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-'-'
+### `npm run eject`
 
-## Technologies
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-HTML, CSS, JavaScript
-live-server[node-js]
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## Reflection
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-NomadCoders side-project 모임.
-1주일동안 진행한 소규모 프로젝트 COLOR Palette 만들기 입니다.
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-TONE을 주제로 정해 12가지의 TONE을 사용자 에게 보여주고, 사용자는 원하는 TONE을 클릭 그후 24가지의 색상을 보여줍니다. 원하는 색상을 선택하면 자동으로 Clip-Board에 복사 되어 붙여 넣을 수 있는 전형적인 COLOR Pallete입니다.
+## Learn More
 
-## To Be Implements
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-: React 사용이 아직 미숙해서, 일단 포기했다.
-추후 React, Redux를 공부해서 특징을 살려서 페이지에 녹여 내는것이 다음 version의 목적.
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-- [] refactoring : React
-- [] More Color or Select Hue Value
-- [] Connect DB => Add Color Charts
-- [] Dark Mode or Many Background Mode
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
