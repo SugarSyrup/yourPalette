@@ -1,11 +1,3 @@
-# Your Palette v2.0
-
-## Project Status
-
-Palette 2.0 제작중...
-
-페이지가 제대로 동작하지 않습니다.
-
 # 이전 버젼 README
 
 ## YOUR Palette v1.0
