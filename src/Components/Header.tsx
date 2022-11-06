@@ -1,22 +1,28 @@
-import React, { SetStateAction, Dispatch } from 'react';
-import styled, {DefaultTheme} from 'styled-components';
+import React from 'react';
+import styled from 'styled-components';
 
 interface Props {
-    setTheme: Dispatch<SetStateAction<boolean>>
+    changeColor: () => void;
 }
 
 const Container = styled.header`
     width:100vw;
     height:10vh;
     margin:0;
-    background-color: indigo;
+    background-color: ${(props) => props.theme.bgColor};
+    color: ${(props) => props.theme.textColorP};
 `;
 
-const Header = (props:Props) => {
-    
+const ThemeChangeBTN = styled.button`
+    width:50px;
+    height:25px;
+    background-color: ${(props) => props.theme.buttonColor};
+`;
+
+const Header = ({ changeColor }:Props) => {
     return(
         <Container>
-
+            <ThemeChangeBTN onClick={changeColor}/>
         </Container>
     );
 }
