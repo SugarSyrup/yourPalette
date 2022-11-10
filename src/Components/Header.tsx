@@ -10,9 +10,12 @@ const Container = styled.header`
     height:10vh;
     margin:0;
     background-color: ${(props) => props.theme.bgColor};
-    color: ${(props) => props.theme.textColorP};
+    color: ${(props) => props.theme.textColorH};
 
     display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items: center;
 `;
 
 const Logo = styled.span`
@@ -23,14 +26,13 @@ const Logo = styled.span`
 `;
 
 const ToneSelector = styled.select`
-    width:200px;
-    height:100px;
 `;
 
-const ThemeChangeBTN = styled.button`
+const ThemeChangeBTN = styled.span`
     margin:10px;
     height:25px;
     background-color: ${(props) => props.theme.buttonColor};
+    color: ${(props) => props.theme.textColor};
 `;
 
 const RankingBtn = styled(ThemeChangeBTN)``;
@@ -44,9 +46,9 @@ const Header = ({ changeColor }:Props) => {
 
     return(
         <Container>
-            <Logo>Your Pallete</Logo>
+            <Logo>YourPallete</Logo>
             <ToneSelector onChange={toneSelectorOnChange}>
-                <option value="">--Please choose an option--</option>
+                <option value="">--Please choose an Theme--</option>
                 <option value="dog">Dog</option>
                 <option value="cat">Cat</option>
                 <option value="hamster">Hamster</option>

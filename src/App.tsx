@@ -5,6 +5,7 @@ import { lightTheme, darkTheme } from "./theme";
 
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
+import Main from "./Components/Main";
 
 const Container = styled.div`
   width:100vw;
@@ -37,6 +38,7 @@ function App() {
     <Container ref={rootContainer} >
       <ThemeProvider theme={currentTheme} >
         <Header changeColor={changeColor} ></Header>
+        <Main></Main>
         <Footer></Footer>
       </ThemeProvider>
     </Container>
