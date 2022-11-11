@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 interface Props {
     changeColor: () => void;
+    setSelectTone: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const Container = styled.header`
@@ -32,16 +33,15 @@ const ThemeChangeBTN = styled.span`
     margin:10px;
     height:25px;
     background-color: ${(props) => props.theme.buttonColor};
-    color: ${(props) => props.theme.textColor};
+    color: ${(props) => props.theme.textColorP};
 `;
 
 const RankingBtn = styled(ThemeChangeBTN)``;
 
-const Header = ({ changeColor }:Props) => {
-    const [tone, setTone] = useState("")
+const Header = ({ changeColor, setSelectTone }:Props) => {
     const toneSelectorOnChange = (event:React.ChangeEvent<HTMLSelectElement>) => {
         event.preventDefault();
-        setTone(event.target.value);
+        setSelectTone(event.target.value);
     }
 
     return(
@@ -56,7 +56,7 @@ const Header = ({ changeColor }:Props) => {
                 <option value="spider">Spider</option>
                 <option value="goldfish">Goldfish</option>
             </ToneSelector>
-            <ThemeChangeBTN onClick={changeColor}>ThemeChange</ThemeChangeBTN>
+            <ThemeChangeBTN>ThemeChange</ThemeChangeBTN>
             <RankingBtn>Ranking</RankingBtn>
         </Container>
     );

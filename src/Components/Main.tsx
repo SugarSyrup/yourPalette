@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
+
+import Color from './Color';
 
 const Container = styled.div`
     height: 80vh;
@@ -7,13 +9,15 @@ const Container = styled.div`
     margin:0;
 `;
 
-const Color = styled.div`
+interface Props {
+    selectTone: string;
+}
 
-`;
-
-const Main = () => {
+const Main = ({selectTone}:Props) => {
+    const [colors, setColors] = useState<string[]>([]);
     return(
-        <Container>    
+        <Container> 
+            <Color count={colors.length} setColors={setColors} colors={colors}></Color>
         </Container>
     );
 }

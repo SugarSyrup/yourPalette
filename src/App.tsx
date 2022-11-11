@@ -17,7 +17,9 @@ const Container = styled.div`
 
 function App() {
   const [currentTheme, setcurrentTheme] = useState<DefaultTheme>(lightTheme);
+  const [selectTone, setSelectTone] = useState<string>("");
   const rootContainer = useRef<HTMLDivElement>(null);
+  
   const changeColor = () => {
     if(currentTheme === lightTheme) {
       setcurrentTheme(darkTheme);
@@ -33,12 +35,13 @@ function App() {
       current.style.backgroundColor = currentTheme.bgColor;
       current.style.color = currentTheme.textColorP;
     }
-  },[currentTheme])
+  },[currentTheme]);
+
   return (
     <Container ref={rootContainer} >
       <ThemeProvider theme={currentTheme} >
-        <Header changeColor={changeColor} ></Header>
-        <Main></Main>
+        <Header changeColor={changeColor} setSelectTone={setSelectTone}></Header>
+        <Main selectTone={selectTone}></Main>
         <Footer></Footer>
       </ThemeProvider>
     </Container>
