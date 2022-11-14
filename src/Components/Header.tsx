@@ -56,7 +56,7 @@ const Header = ({ changeColor, setSelectTone }:Props) => {
                 <option value="spider">Spider</option>
                 <option value="goldfish">Goldfish</option>
             </ToneSelector>
-            <ThemeChangeBTN>ThemeChange</ThemeChangeBTN>
+            <ThemeChangeBTN onClick={changeColor}>ThemeChange</ThemeChangeBTN>
             <RankingBtn>Ranking</RankingBtn>
         </Container>
     );

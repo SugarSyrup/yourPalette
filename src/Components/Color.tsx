@@ -13,10 +13,6 @@ const Content = styled.div<{width:number; bgColor:string}>`
     height:100%;
     width:${(props) => props.width || 50}%;
     background-color:${(props) => props.bgColor};
-
-    ${svg} {
-        margin-top:30px;
-    }
 `;
 
 const generateBgColor = () => {
