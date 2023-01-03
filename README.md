@@ -12,6 +12,8 @@ Palette 2.0 version 업데이트 중...
 
 웹페이지 전반적인 기능 및 UI/UX 수정
 
+색상 랜덤 출력 + Color Components 분리
+
 COLOR Ranking 기능 추가
 
 ✔ DARK/LIGHT MODE 기능 추가
