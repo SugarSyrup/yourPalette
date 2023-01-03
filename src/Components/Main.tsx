@@ -9,11 +9,7 @@ const Container = styled.div`
     margin:0;
 `;
 
-interface Props {
-    selectTone: string;
-}
-
-const Main = ({selectTone}:Props) => {
+const Main = () => {
     const [colors, setColors] = useState<string[]>([]);
     const onCheckBtnClick = () => {
         

@@ -1,11 +1,14 @@
-import React, {useState, useRef, useEffect} from "react";
-import styled, { ThemeProvider, DefaultTheme } from "styled-components";
+import React from "react";
+import styled, { ThemeProvider } from "styled-components";
 
 import { lightTheme, darkTheme } from "./theme";
 
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Main from "./Components/Main";
+
+import { useRecoilValue } from "recoil";
+import { isDarkMode } from "./atoms";
 
 const Container = styled.div`
   width:100vw;
@@ -15,29 +18,15 @@ const Container = styled.div`
 `;
 
 
-function App() {
-  const [currentTheme, setcurrentTheme] = useState<DefaultTheme>(lightTheme);
-  const [selectTone, setSelectTone] = useState<string>("");
-  const rootContainer = useRef<HTMLDivElement>(null);
-  
-  const changeColor = () => {
-    currentTheme === lightTheme ? setcurrentTheme(darkTheme) : setcurrentTheme(lightTheme);
-  }
-
-  useEffect(() => {
-    const { current } = rootContainer;
-    if (current !== null) {
-      current.style.backgroundColor = currentTheme.bgColor;
-      current.style.color = currentTheme.textColorP;
-    }
-  },[currentTheme]);
+function App() {  
+  const _isDarkMode = useRecoilValue(isDarkMode);
 
   return (
-    <Container ref={rootContainer} >
-      <ThemeProvider theme={currentTheme} >
-        <Header changeColor={changeColor} setSelectTone={setSelectTone}></Header>
-        <Main selectTone={selectTone}></Main>
-        <Footer></Footer>
+    <Container>
+      <ThemeProvider theme={_isDarkMode ? darkTheme : lightTheme} >
+        <Header />
+        <Main />
+        <Footer />
       </ThemeProvider>
     </Container>
   );

@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
-interface Props {
-    changeColor: () => void;
-    setSelectTone: React.Dispatch<React.SetStateAction<string>>;
-}
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+
+import { isDarkMode } from '../atoms';
+import { useRecoilState } from 'recoil';
 
 const Container = styled.header`
     width:100vw;
@@ -15,7 +16,7 @@ const Container = styled.header`
 
     display:flex;
     flex-direction:row;
-    justify-content:center;
+    justify-content:space-between;
     align-items: center;
 `;
 
@@ -26,28 +27,20 @@ const Logo = styled.span`
     color: ${(props) => props.theme.textColorH};
 `;
 
-const ToneSelector = styled.select`
-`;
-
-const ThemeChangeBTN = styled.span`
-    margin:10px;
-    height:25px;
-    background-color: ${(props) => props.theme.buttonColor};
-    color: ${(props) => props.theme.textColorP};
-`;
-
-const RankingBtn = styled(ThemeChangeBTN)``;
-
-const Header = ({ changeColor, setSelectTone }:Props) => {
-    const toneSelectorOnChange = (event:React.ChangeEvent<HTMLSelectElement>) => {
-        event.preventDefault();
-        setSelectTone(event.target.value);
+const ButtonContainer = styled.div`
+    svg{
+        width:40px;
+        height:40px;
     }
+`
+
+const Header = () => {
+    const [_isDarkMode, _setDarkMode] = useRecoilState(isDarkMode);
 
     return(
         <Container>
             <Logo>YourPallete</Logo>
-            <ToneSelector onChange={toneSelectorOnChange}>
+            <select>
                 <option value="">--Please choose an Theme--</option>
                 <option value="dog">Dog</option>
                 <option value="cat">Cat</option>
@@ -55,9 +48,13 @@ const Header = ({ changeColor, setSelectTone }:Props) => {
                 <option value="parrot">Parrot</option>
                 <option value="spider">Spider</option>
                 <option value="goldfish">Goldfish</option>
-            </ToneSelector>
-            <ThemeChangeBTN onClick={changeColor}>ThemeChange</ThemeChangeBTN>
-            <RankingBtn>Ranking</RankingBtn>
+            </select>
+            <ButtonContainer>
+                {_isDarkMode ? 
+                    <FontAwesomeIcon icon={ faSun } onClick={() => _setDarkMode(prev => !prev)} /> 
+                    : <FontAwesomeIcon icon={ faMoon } onClick={() => _setDarkMode(prev => !prev)} />
+                }                    
+            </ButtonContainer>
         </Container>
     );
 }
