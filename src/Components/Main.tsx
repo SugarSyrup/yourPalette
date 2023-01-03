@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Color from './Color';
 
 const Container = styled.div`
-    height: 80vh;
+    height: 85vh;
     width:100vw;
     margin:0;
 `;

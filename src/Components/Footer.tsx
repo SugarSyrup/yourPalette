@@ -4,9 +4,9 @@ import styled from 'styled-components';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-const Container = styled.footer`
+const FooterContainer = styled.footer`
     width:100vw;
-    height:10vh;
+    height:5vh;
     margin:0;
 
     transition:0.5s;
@@ -17,34 +17,23 @@ const Container = styled.footer`
     justify-content:flex-end;
     align-items: center;
 
+    svg{
+        width:25px;
+        height:25px;
+        margin-right:20px;
+    }
 `;
 
-const MadeBy = styled.span`
-    margin-right:20px;
-    margin-left:30px;
-    font-size:24px;
-    font-weight:bolder;
-
-    color:${(props) => props.theme.textColorP};
-    cursor:pointer;
-`;
-
-const LinkIcon = styled.div`
-
-`;
 
 const Footer = () => {
-    const onClickGit = (event:React.MouseEvent<HTMLSpanElement>) => {
-        window.location.href = "https://naver.com";
+    const onClickGit = (event:React.MouseEvent<HTMLOrSVGElement>) => {
+        window.location.href = "https://github.com/SugarSyrup";
     }
+
     return(
-        <Container>
-            <LinkIcon>
-                <FontAwesomeIcon icon={faGithub} />
-            </LinkIcon>
-            <LinkIcon>Mail</LinkIcon>
-            <MadeBy onClick={onClickGit}>@ruswkdbs</MadeBy>          
-        </Container>
+        <FooterContainer>
+            <FontAwesomeIcon icon={faGithub} onClick={onClickGit}/>      
+        </FooterContainer>
     );
 }
 
