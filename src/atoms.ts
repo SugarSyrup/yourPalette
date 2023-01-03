@@ -1,6 +1,17 @@
-import {atom} from 'recoil';
+import {atom, selector} from 'recoil';
 
-export const isDarkMode = atom({
+export interface IColorType {
+    hue:number,
+    saturation:number,
+    lightness:number,
+}
+
+export const isDarkMode = atom<boolean>({
     key:"isDarkMode",
     default:false,
 });
+
+export const settingColors = atom<IColorType[]>({
+    key:"settingColors",
+    default : [],
+})

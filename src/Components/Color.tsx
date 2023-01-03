@@ -1,8 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faRotateRight, faCheck, faX } from '@fortawesome/free-solid-svg-icons';
+
+import {IColorType, settingColors} from '../atoms';
+import { useRecoilValue } from 'recoil';
 
 const Content = styled.div<{width:number; bgColor:string}>`
     display:flex;
@@ -19,37 +22,23 @@ const Content = styled.div<{width:number; bgColor:string}>`
     }
 `;
 
-const generateBgColor = () => {
+const generateRandomBgColor = ():string => {
     return `hsl(${Math.floor(Math.random() * (255))}, ${Math.floor(Math.random() * (100))}%, ${Math.floor(Math.random() * (100))}%)`;
 }
 
-interface Props {
-    count: number;
-    colors: string[];
-    setColors:React.Dispatch<React.SetStateAction<string[]>>;
-    onCheckBtnClick: () => void;
-    onDeleteBtnClick: () => void;
+const generateBgColor = (hue:number, saturation:number, lightness:number):string => {
+    return `hsl(${hue}%, ${saturation}%, ${lightness}%)`;
 }
 
-const Color = ({count, colors, setColors, onCheckBtnClick, onDeleteBtnClick}:Props) => {
-    const [color, setColor] = useState(generateBgColor());
 
-    useEffect(() => {
-        const _colors = colors;
-        _colors.push(color);
-        setColors(_colors);
-    },[color]);
-
-    const onRotateBtnClick = (event:React.MouseEvent) => {
-        event.preventDefault();
-        const newColor = generateBgColor();
-    }
+const Color = ({hue, saturation, lightness}:IColorType) => {
+    const getLength = useRecoilValue(settingColors).length;
     return(
-        <Content width={100 / count} bgColor={color}>
+        <Content width={getLength + 1 / 100} bgColor={generateBgColor(hue, saturation, lightness)}>
             <FontAwesomeIcon icon={faBars} />
-            <FontAwesomeIcon onClick={onRotateBtnClick} icon={faRotateRight} />
-            <FontAwesomeIcon onClick={onCheckBtnClick} icon={faCheck} />
-            <FontAwesomeIcon onClick={onDeleteBtnClick} icon={faX} />
+            <FontAwesomeIcon icon={faRotateRight} />
+            <FontAwesomeIcon icon={faCheck} />
+            <FontAwesomeIcon icon={faX} />
         </Content>
     )
 }

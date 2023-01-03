@@ -1,5 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styled from 'styled-components';
+
+import { settingColors } from '../atoms';
+import { useRecoilValue } from 'recoil';
 
 import Color from './Color';
 
@@ -10,16 +13,15 @@ const Container = styled.div`
 `;
 
 const Main = () => {
-    const [colors, setColors] = useState<string[]>([]);
-    const onCheckBtnClick = () => {
-        
-    }
-    const onDeleteBtnClick = () => {
-
-    }
+    const _settingColors = useRecoilValue(settingColors);
+    _settingColors.forEach((color) => {console.log(color)});
     return(
         <Container> 
-            <Color count={colors.length} setColors={setColors} colors={colors} onCheckBtnClick={onCheckBtnClick} onDeleteBtnClick={onDeleteBtnClick}></Color>
+            {
+                _settingColors.map((_settingColor) => (
+                    <Color {..._settingColor} />
+                ))
+            }
         </Container>
     );
 }
