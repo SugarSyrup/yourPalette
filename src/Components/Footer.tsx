@@ -9,7 +9,9 @@ const Container = styled.footer`
     height:10vh;
     margin:0;
 
-    background-color: ligthgrey;
+    transition:0.5s;
+    background-color: ${(props) => props.theme.bgColor};
+    color: ${(props) => props.theme.textColorH};
 
     display:flex;
     justify-content:flex-end;
