@@ -21,16 +21,11 @@ function App() {
   const rootContainer = useRef<HTMLDivElement>(null);
   
   const changeColor = () => {
-    if(currentTheme === lightTheme) {
-      setcurrentTheme(darkTheme);
-    } else {
-      setcurrentTheme(lightTheme);
-    }
+    currentTheme === lightTheme ? setcurrentTheme(darkTheme) : setcurrentTheme(lightTheme);
   }
 
   useEffect(() => {
     const { current } = rootContainer;
-    console.log(current);
     if (current !== null) {
       current.style.backgroundColor = currentTheme.bgColor;
       current.style.color = currentTheme.textColorP;

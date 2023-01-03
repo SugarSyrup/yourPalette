@@ -15,9 +15,15 @@ interface Props {
 
 const Main = ({selectTone}:Props) => {
     const [colors, setColors] = useState<string[]>([]);
+    const onCheckBtnClick = () => {
+        
+    }
+    const onDeleteBtnClick = () => {
+
+    }
     return(
         <Container> 
-            <Color count={colors.length} setColors={setColors} colors={colors}></Color>
+            <Color count={colors.length} setColors={setColors} colors={colors} onCheckBtnClick={onCheckBtnClick} onDeleteBtnClick={onDeleteBtnClick}></Color>
         </Container>
     );
 }
